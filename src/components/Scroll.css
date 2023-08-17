@@ -1,0 +1,12 @@
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .scroll-progress-bar {
+    height: 3px;
+  }
+  

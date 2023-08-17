@@ -1,25 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { bg } from './components/global';
+import { Greet } from './components/Greet';
+import { Person } from './components/Person';
+import { Personlist } from './components/Personlist'
+import { Status } from './components/Status'
+import Header from './components/Header';
+import { Layout } from './components/Layout';
+import ScrollProgress from './components/Scroll';
+import { Route, Router } from 'react-router-dom';
+
+
 
 function App() {
+
+  const personName={
+    first:'Harsh',
+    last:'Patel',
+  }
+  const nameList=[
+    {
+      first:'Harsh',
+      last:'Patel'
+    },
+    {
+      first:'Viren',
+      last:'Asodariya'
+    },
+    {
+      first:'Pranay',
+      last:'Shah'
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Greet name="Harsh" messageCount={5} isLoggedIn={false}/>
+      <Person name={personName}/>
+      <Personlist names={nameList} /> */}
+      <ScrollProgress/> 
+      <Layout/>
+      <Status status={'error'}/>
+    </>
   );
 }
 
